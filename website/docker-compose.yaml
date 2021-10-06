@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  web:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - 5000:5000
+      - 5001:5001
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:5000
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/Local/gcloud.json
+      # Define publishing configuration options.
+      - PubSubVisitCounterService__ProjectId=fiuba-taller3
+      - PubSubVisitCounterService__TopicId=visit-counter-dev
+      - PubSubVisitCounterService__IsPublishingEnabled=true
+      # Define the API base URL.
+      - VisitCounterService__VisitCounterApiBase=http://api:8080
+      - VisitCounterService__GetCountEndpoint=/api/visits/total
+
+# Create the external network with
+# docker network create taller3
+networks:
+  default:
+    external: true
+    name: taller3

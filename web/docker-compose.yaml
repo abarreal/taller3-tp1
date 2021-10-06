@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  web:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - 8000:8000
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/usr/src/app/local/gcloud.json
+      # Define publishing configuration options.
+      - GCP_PROJECT_ID=fiuba-taller3
+      - GCP_PUBSUB_TOPIC_ID=visit-counter
+      # Define the API base URL.
+      - API_HOST=api
+      - API_PORT=8080
+      - API_ENDPOINT_GET_TOTAL_VISITS=/api/visits/total
+
+# Create the external network with
+# docker network create taller3
+networks:
+  default:
+    external: true
+    name: taller3

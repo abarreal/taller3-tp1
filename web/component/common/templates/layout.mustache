@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="/static/css/bulma.css">
+	<title>{{title}}</title>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="mt-4 mb-4">
+			<img src="/static/img/logo.png">
+			<p class="mt-4">Visits: <span id="visitcounter" hidden>{{visitcount}}</visitcounter></p>
+		</div>
+
+		<nav class="mb-4">
+			<a href="/home">Home</a> |
+			<a href="/jobs">Jobs</a> |
+			<a href="/about">About</a>
+		</nav>
+
+		<main class="content pb-6">
+			{{{body}}}
+		</main>
+
+	</div>
+
+	<script src="/static/js/visitcounter.js"></script>
+
+</body>
+</html>

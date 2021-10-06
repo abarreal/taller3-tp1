@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  svc:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/opt/app/local/gcloud.json
+      - GCP_PROJECT_ID=fiuba-taller3
+      - AGGREGATION_INTERVAL_IN_SECONDS=6
+
