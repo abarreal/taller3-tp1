@@ -6,7 +6,7 @@ import random
 class WebsiteUser(HttpUser):
 
     def on_start(self):
-        self.cached = set()
+        self.cache = set()
 
     def hit_and_sleep(self, resource, min_sleep, max_sleep):
         response_text = ''
@@ -14,7 +14,7 @@ class WebsiteUser(HttpUser):
             response_text = response.text
         # Download static resources if not in this user's cache already.
         if not resource in self.cache:
-            soup = BeautifulSoup(response_text)
+            soup = BeautifulSoup(response_text, features="html.parser")
             # Download static images.
             for elem in soup.find_all('img'):
                 self.client.get(elem.get('src'))
@@ -25,7 +25,7 @@ class WebsiteUser(HttpUser):
             for elem in soup.find_all('script'):
                 self.client.get(elem.get('src'))
             # Mark the resource as cached for this user.
-            self.cached.add(resource)
+            self.cache.add(resource)
         # Sleep a random amount in the given range.
         self.sleep(min_sleep, max_sleep)
 
@@ -46,17 +46,17 @@ class WebsiteUser(HttpUser):
 
         @task(6)
         def about(self):
-            self.hit_and_sleep('/about', 3.0, 15.0)
+            self.user.hit_and_sleep('/about', 3.0, 15.0)
 
 
         @task(3)
         def offices(self):
-            self.hit_and_sleep('/about/offices', 3.0, 15.0)
+            self.user.hit_and_sleep('/about/offices', 3.0, 15.0)
 
 
         @task(1)
         def legals(self):
-            self.hit_and_sleep('/about/legals', 4.0, 40.0)
+            self.user.hit_and_sleep('/about/legals', 4.0, 40.0)
 
         @task(5)
         def back(self):
