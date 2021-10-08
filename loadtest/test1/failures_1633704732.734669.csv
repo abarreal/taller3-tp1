@@ -1,0 +1,11 @@
+Method,Name,Error,Occurrences
+GET,/static/css/bulma.css,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/static/css/bulma.css,6
+GET,/about/offices,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/about/offices,7
+GET,/home,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/home,56
+GET,/about/legals,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/about/legals,6
+GET,/jobs,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/jobs,38
+GET,/static/img/pc.jpg,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/static/img/pc.jpg,5
+GET,/static/img/logo.png,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/static/img/logo.png,11
+GET,/about,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/about,19
+GET,/static/js/visitcounter.js,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/static/js/visitcounter.js,12
+GET,/static/img/lh.jpeg,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/static/img/lh.jpeg,4
