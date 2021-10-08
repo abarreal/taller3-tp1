@@ -42,8 +42,9 @@ deploy:
 		--allow-unauthenticated\
 		--cpu=1\
 		--memory=1Gi\
+		--concurrency=5\
 		--min-instances=0\
-		--max-instances=2\
+		--max-instances=6\
 		--region=us-east1\
 		--platform=managed\
 		--timeout=60s\

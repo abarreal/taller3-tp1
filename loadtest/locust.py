@@ -13,6 +13,7 @@ class WebsiteUser(HttpUser):
         with self.client.get(resource, catch_response=True) as response:
             response_text = response.text
         # Download static resources if not in this user's cache already.
+        """
         if not resource in self.cache:
             soup = BeautifulSoup(response_text, features="html.parser")
             # Download static images.
@@ -26,6 +27,7 @@ class WebsiteUser(HttpUser):
                 self.client.get(elem.get('src'))
             # Mark the resource as cached for this user.
             self.cache.add(resource)
+        """
         # Sleep a random amount in the given range.
         self.sleep(min_sleep, max_sleep)
 

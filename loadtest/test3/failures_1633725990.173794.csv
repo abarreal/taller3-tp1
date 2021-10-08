@@ -1,0 +1,6 @@
+Method,Name,Error,Occurrences
+GET,/about/offices,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/about/offices,8
+GET,/home,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/home,32
+GET,/about/legals,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/about/legals,2
+GET,/jobs,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/jobs,28
+GET,/about,429 Client Error: Too Many Requests for url: https://website-wl63molm2a-ue.a.run.app/about,14

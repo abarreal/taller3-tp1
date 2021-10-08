@@ -43,7 +43,7 @@ deploy:
 		--cpu=1\
 		--memory=1Gi\
 		--min-instances=0\
-		--max-instances=2\
+		--max-instances=1\
 		--region=us-east1\
 		--platform=managed\
 		--timeout=60s\
