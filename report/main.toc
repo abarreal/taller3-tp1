@@ -1,0 +1,17 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{}%
+\contentsline {section}{\numberline {2}Contexto del sistema de software}{2}{}%
+\contentsline {section}{\numberline {3}Contenedores}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Elementos autónomos y ejecutables}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Escalabilidad y tolerancia a fallos}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Despliegue}{6}{}%
+\contentsline {subsection}{\numberline {3.4}Parámetros de despliegue}{7}{}%
+\contentsline {section}{\numberline {4}Componentes}{7}{}%
+\contentsline {subsection}{\numberline {4.1}Sitio web}{7}{}%
+\contentsline {subsection}{\numberline {4.2}API web}{8}{}%
+\contentsline {subsection}{\numberline {4.3}Contador de visitas}{10}{}%
+\contentsline {subsection}{\numberline {4.4}Agregador}{11}{}%
+\contentsline {section}{\numberline {5}Código}{14}{}%
+\contentsline {subsection}{\numberline {5.1}Sitio web}{14}{}%
+\contentsline {subsection}{\numberline {5.2}Restantes componentes}{14}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
